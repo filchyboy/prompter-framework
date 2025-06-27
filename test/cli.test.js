@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll } from 'vitest';
+import { describe, it, expect, beforeAll, beforeEach, afterEach } from 'vitest';
 import { generatePrompt, savePromptToFile, validateTaskType, getAvailableTaskTypes, initializeData } from '../src/cli/index.js';
 import fs from 'fs';
 import path from 'path';
