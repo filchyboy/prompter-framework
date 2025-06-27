@@ -21,7 +21,7 @@ npm install
 **After (Prompter Framework):**
 ```bash
 # Install as npm package
-npm install @filchyboy/prompter-framework
+npm install prompter-framework
 ```
 
 ### CLI Usage
@@ -35,7 +35,7 @@ node src/cli.js generate --type implementation --title "My Task"
 ```bash
 prompter generate --type implementation --title "My Task"
 # or
-npx @filchyboy/prompter-framework generate --type implementation --title "My Task"
+npx prompter-framework generate --type implementation --title "My Task"
 ```
 
 ### Programmatic Usage
@@ -53,7 +53,7 @@ const prompt = generatePrompt(formData, taskType);
 
 **After:**
 ```javascript
-import { PromptGenerator } from '@filchyboy/prompter-framework';
+import { PromptGenerator } from 'prompter-framework';
 
 const generator = new PromptGenerator();
 const prompt = generator.generate(formData, taskType);
@@ -69,7 +69,7 @@ import { taskTypes } from './scripts/ai-prompt-generator/src/data/taskTypes.js';
 
 **After:**
 ```javascript
-import { templates, taskTypes } from '@filchyboy/prompter-framework';
+import { templates, taskTypes } from 'prompter-framework';
 ```
 
 ## New Features
@@ -79,7 +79,7 @@ import { templates, taskTypes } from '@filchyboy/prompter-framework';
 The new framework includes a plugin system for custom task types:
 
 ```javascript
-import { PromptGenerator, createPlugin } from '@filchyboy/prompter-framework';
+import { PromptGenerator, createPlugin } from 'prompter-framework';
 
 const customPlugin = createPlugin({
   name: 'my-custom-plugin',
@@ -118,7 +118,7 @@ The package now supports multiple import/export formats:
 ### Step 1: Install the Package
 
 ```bash
-npm install @filchyboy/prompter-framework
+npm install prompter-framework
 ```
 
 ### Step 2: Update Import Statements
@@ -130,7 +130,7 @@ Replace relative imports with package imports:
 import { generatePrompt } from './scripts/ai-prompt-generator/src/utils/promptBuilderNode.js';
 
 // New
-import { PromptGenerator } from '@filchyboy/prompter-framework';
+import { PromptGenerator } from 'prompter-framework';
 ```
 
 ### Step 3: Update Code Usage
@@ -181,7 +181,7 @@ const templatesModule = await import(`${aiPromptGenPath}/data/templates.js`);
 
 **After:**
 ```javascript
-import { templates, PromptGenerator } from '@filchyboy/prompter-framework';
+import { templates, PromptGenerator } from 'prompter-framework';
 const generator = new PromptGenerator();
 ```
 
@@ -192,7 +192,7 @@ Update any configuration files that reference the old paths:
 ```json
 {
   "promptGenerator": {
-    "path": "@filchyboy/prompter-framework",
+    "path": "prompter-framework",
     "command": "prompter"
   }
 }
@@ -210,7 +210,7 @@ Update any configuration files that reference the old paths:
 Create a simple test to verify the migration:
 
 ```javascript
-import { PromptGenerator } from '@filchyboy/prompter-framework';
+import { PromptGenerator } from 'prompter-framework';
 
 const generator = new PromptGenerator();
 const prompt = generator.generate({

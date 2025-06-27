@@ -17,7 +17,7 @@ A meta-framework for generating structured AI agent prompts with built-in contex
 ### Installation
 
 ```bash
-npm install @filchyboy/prompter-framework
+npm install prompter-framework
 ```
 
 ### CLI Usage
@@ -41,7 +41,7 @@ prompter generate --json my-task.json
 ### Programmatic Usage
 
 ```javascript
-import { PromptGenerator } from '@filchyboy/prompter-framework';
+import { PromptGenerator } from 'prompter-framework';
 
 const generator = new PromptGenerator();
 
@@ -57,7 +57,7 @@ console.log(prompt);
 ### Plugin System
 
 ```javascript
-import { PromptGenerator, createPlugin } from '@filchyboy/prompter-framework';
+import { PromptGenerator, createPlugin } from 'prompter-framework';
 
 const securityPlugin = createPlugin({
   name: 'security-audit',

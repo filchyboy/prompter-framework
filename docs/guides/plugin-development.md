@@ -41,7 +41,7 @@ const myPlugin = {
 Use the `createPlugin` helper function:
 
 ```javascript
-import { createPlugin } from '@filchyboy/prompter-framework';
+import { createPlugin } from 'prompter-framework';
 
 const securityPlugin = createPlugin({
   name: 'security-audit',
@@ -90,7 +90,7 @@ const securityPlugin = createPlugin({
 ## Using Plugins
 
 ```javascript
-import { PromptGenerator } from '@filchyboy/prompter-framework';
+import { PromptGenerator } from 'prompter-framework';
 
 const generator = new PromptGenerator();
 generator.use(securityPlugin);

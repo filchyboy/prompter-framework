@@ -63,7 +63,7 @@ jobs:
     
     - name: Publish to npm (if version changed)
       run: |
-        if npm view @filchyboy/prompter-framework@$(node -p "require('./package.json').version") version 2>/dev/null; then
+        if npm view prompter-framework@$(node -p "require('./package.json').version") version 2>/dev/null; then
           echo "Version already published, skipping..."
         else
           npm publish
