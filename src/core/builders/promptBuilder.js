@@ -81,17 +81,17 @@ ${template.contextSwitches.map(cs => `- **${cs.split(':')[0]}**: "${cs.split(':'
 
 ### Validation Checkpoints
 ${Object.entries(template.checkpoints).map(([phase, checks]) => 
-  `#### ${phase}\n${checks.map(check => `- [ ] ${check}`).join('\n')}`
-).join('\n\n')}
+    `#### ${phase}\n${checks.map(check => `- [ ] ${check}`).join('\n')}`
+  ).join('\n\n')}
 ${formData.customCheckpoints?.filter(c => c.trim()).length > 0 ? 
-  `\n#### Custom Checkpoints\n${formData.customCheckpoints.filter(c => c.trim()).map(check => `- [ ] ${check}`).join('\n')}` : ''}
+    `\n#### Custom Checkpoints\n${formData.customCheckpoints.filter(c => c.trim()).map(check => `- [ ] ${check}`).join('\n')}` : ''}
 
 ### Failure Recovery Strategies
 ${Object.entries(template.failures).map(([scenario, steps]) =>
-  `#### ${scenario}\n${steps.map((step, i) => `${i + 1}. ${step}`).join('\n')}`
-).join('\n\n')}
+    `#### ${scenario}\n${steps.map((step, i) => `${i + 1}. ${step}`).join('\n')}`
+  ).join('\n\n')}
 ${formData.customFailures?.filter(f => f.trim()).length > 0 ?
-  `\n#### Custom Failure Scenarios\n${formData.customFailures.filter(f => f.trim()).map((failure, i) => `${i + 1}. ${failure}`).join('\n')}` : ''}
+    `\n#### Custom Failure Scenarios\n${formData.customFailures.filter(f => f.trim()).map((failure, i) => `${i + 1}. ${failure}`).join('\n')}` : ''}
 
 #### General Recovery Protocol
 - **Stop and Assess**: Don't repeat failed approaches - analyze why it didn't work

@@ -72,7 +72,7 @@
     "build:cjs": "rollup -c rollup.config.cjs.js",
     "build:types": "tsc --emitDeclarationOnly --outDir lib",
     "dev": "npm run build:esm -- --watch",
-    "test": "vitest",
+    "test": "vitest run",
     "test:coverage": "vitest --coverage",
     "test:ui": "vitest --ui",
     "lint": "eslint src/ --ext .js,.ts",

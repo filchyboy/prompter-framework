@@ -146,28 +146,28 @@ program
   .option('-o, --output <file>', 'Output file path', 'task-template.json')
   .action((options) => {
     const template = {
-      title: "Example Task Title",
-      type: options.type || "implementation",
-      id: "#123",
-      priority: "medium",
-      complexity: "medium",
+      title: 'Example Task Title',
+      type: options.type || 'implementation',
+      id: '#123',
+      priority: 'medium',
+      complexity: 'medium',
       requirements: [
-        "First requirement",
-        "Second requirement"
+        'First requirement',
+        'Second requirement'
       ],
       constraints: [
-        "Technical constraint 1",
-        "Technical constraint 2"
+        'Technical constraint 1',
+        'Technical constraint 2'
       ],
       resources: [
-        "Resource reference 1",
-        "Resource reference 2"
+        'Resource reference 1',
+        'Resource reference 2'
       ],
       customCheckpoints: [
-        "Custom validation checkpoint"
+        'Custom validation checkpoint'
       ],
       customFailures: [
-        "Custom failure scenario and recovery"
+        'Custom failure scenario and recovery'
       ]
     };
 

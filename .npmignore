@@ -1,0 +1,34 @@
+# Development files
+.github/
+.vscode/
+test/
+examples/
+docs/
+tools/
+coverage/
+
+# Configuration files
+.eslintrc.json
+vitest.config.js
+rollup.config.*.js
+tsconfig.json
+
+# Source files (we publish built files)
+src/
+
+# Build artifacts we don't need
+*.log
+.DS_Store
+.env*
+
+# Git files
+.git/
+.gitignore
+
+# Only include what's needed for the package
+!lib/
+!bin/
+!README.md
+!LICENSE
+!CHANGELOG.md
+!package.json
