@@ -12,3 +12,6 @@ export { PluginManager, createPlugin } from './plugins/index.js';
 
 // Version info
 export const VERSION = '1.0.0';
+
+// Note: Web components are available separately in src/web/ directory
+// They require React and JSX compilation for use
