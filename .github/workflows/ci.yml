@@ -24,9 +24,9 @@ jobs:
         # Remove npm cache to avoid optional dependency issues
         cache: ''
     
-    - name: Clean node_modules and package-lock.json
+    - name: Clean node_modules
       run: |
-        rm -rf node_modules package-lock.json
+        rm -rf node_modules
     
     - name: Install dependencies
       run: npm ci
@@ -59,9 +59,9 @@ jobs:
         # Remove npm cache to avoid optional dependency issues
         cache: ''
     
-    - name: Clean node_modules and package-lock.json
+    - name: Clean node_modules
       run: |
-        rm -rf node_modules package-lock.json
+        rm -rf node_modules
     
     - name: Install dependencies
       run: npm ci
