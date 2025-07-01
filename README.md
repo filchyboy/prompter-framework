@@ -109,6 +109,10 @@ const prompt = generator.generate({
 }, 'security-audit');
 ```
 
+## Documentation
+
+See [docs/index.md](docs/index.md) for additional guides.
+
 ## Available Task Types
 
 - **implementation**: Feature development and system building
