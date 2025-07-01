@@ -1,0 +1,22 @@
+{
+  "name": "ai-prompt-generator",
+  "version": "1.0.0",
+  "description": "AI Agent Prompt Generator with Meta-Framework Support (CLI)",
+  "type": "module",
+  "main": "src/cli.js",
+  "bin": {
+    "ai-prompt-gen": "./src/cli.js"
+  },
+  "dependencies": {
+    "commander": "^14.0.0"
+  },
+  "keywords": [
+    "ai",
+    "prompts",
+    "agent",
+    "automation",
+    "cli"
+  ],
+  "author": "Malevich",
+  "license": "MIT"
+}
