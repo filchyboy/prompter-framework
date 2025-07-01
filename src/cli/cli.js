@@ -14,6 +14,7 @@ if (major < MIN_NODE_VERSION.major ||
 import { program } from 'commander';
 import fs from 'fs';
 import path from 'path';
+import { readConfig, updateConfig } from '../taskmaster/config.js';
 import { 
   initializeData, 
   generatePrompt, 
@@ -173,6 +174,33 @@ program
 
     fs.writeFileSync(options.output, JSON.stringify(template, null, 2));
     console.log(`Template saved to: ${options.output}`);
+  });
+
+const taskmaster = program.command('taskmaster').description('Taskmaster utilities');
+
+taskmaster
+  .command('get [key]')
+  .description('View configuration')
+  .action((key) => {
+    const config = readConfig();
+    if (key) {
+      console.log(config[key]);
+    } else {
+      console.log(JSON.stringify(config, null, 2));
+    }
+  });
+
+taskmaster
+  .command('set <key> <value>')
+  .description('Set configuration value')
+  .action((key, value) => {
+    try {
+      updateConfig({ [key]: value });
+      console.log(`Updated ${key} to ${value}`);
+    } catch (err) {
+      console.error('Error:', err.message);
+      process.exit(1);
+    }
   });
 
 program.parse();

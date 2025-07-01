@@ -1,0 +1,5 @@
+{
+  "defaultPriority": "medium",
+  "defaultComplexity": "medium",
+  "outputDir": "./prompts"
+}

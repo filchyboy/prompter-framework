@@ -66,6 +66,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
+    "pretest": "node -e \"try{require.resolve('vitest/package.json')}catch(e){console.error('Vitest not installed. Run npm install.');process.exit(1)}\"",
     "build": "npm run build:clean && npm run build:esm && npm run build:cjs && npm run build:types",
     "build:clean": "rimraf lib/",
     "build:esm": "rollup -c rollup.config.esm.js",
@@ -85,9 +86,11 @@
     "release:beta": "npm run prepublishOnly && npm publish --tag beta",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "update:task-master": "node scripts/update-task-master.js"
   },
   "dependencies": {
+    "claude-task-master": "^1.6.4",
     "commander": "^12.0.0"
   },
   "peerDependencies": {
