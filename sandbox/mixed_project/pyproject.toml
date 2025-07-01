@@ -1,0 +1,5 @@
+[tool.poetry]
+name = "mixed-python-node-project"
+version = "0.1.0"
+description = "Python part of the mixed environment"
+authors = ["Your Name <your@email.com>"]

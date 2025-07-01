@@ -1,0 +1,5 @@
+[tool.poetry]
+name = "sample-python-project"
+version = "0.1.0"
+description = "Sample Python-only project"
+authors = ["Your Name <your@email.com>"]
