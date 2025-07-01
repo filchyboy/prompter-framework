@@ -66,6 +66,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
+    "pretest": "node -e \"try{require.resolve('vitest/package.json')}catch(e){console.error('Vitest not installed. Run npm install.');process.exit(1)}\"",
     "build": "npm run build:clean && npm run build:esm && npm run build:cjs && npm run build:types",
     "build:clean": "rimraf lib/",
     "build:esm": "rollup -c rollup.config.esm.js",

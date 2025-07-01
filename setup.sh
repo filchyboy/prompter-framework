@@ -7,11 +7,6 @@ if ! command -v node >/dev/null; then
   apt-get install -y nodejs
 fi
 
-# Install project dependencies
-npm install
-
-# Build the library
-npm run build
-
-# Run the tests
-node --experimental-vm-modules ./node_modules/.bin/vitest run
+# Install project dependencies and run tests
+npm ci
+npm test

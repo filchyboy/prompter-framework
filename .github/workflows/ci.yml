@@ -29,15 +29,13 @@ jobs:
         rm -rf node_modules package-lock.json
     
     - name: Install dependencies
-      run: npm install
+      run: npm ci
     
     - name: Run build
       run: npm run build
     
-    - name: Run tests with Node.js flags
-      run: node --experimental-vm-modules ./node_modules/.bin/vitest run
-      env:
-        NODE_OPTIONS: '--max-old-space-size=4096'
+    - name: Run tests
+      run: NODE_OPTIONS='--experimental-vm-modules --max-old-space-size=4096' npm test
     
     - name: Run linting
       run: npm run lint
@@ -66,7 +64,7 @@ jobs:
         rm -rf node_modules package-lock.json
     
     - name: Install dependencies
-      run: npm install
+      run: npm ci
     
     - name: Build package
       run: npm run build
