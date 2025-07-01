@@ -20,6 +20,18 @@ A meta-framework for generating structured AI agent prompts with built-in contex
 npm install prompter-framework
 ```
 
+### Development Setup
+
+Install dependencies and run the test suite:
+
+```bash
+npm ci
+npm test
+```
+
+Alternatively you can run `setup.sh` which installs Node.js if
+necessary and performs the same commands automatically.
+
 ### CLI Usage
 
 ```bash
