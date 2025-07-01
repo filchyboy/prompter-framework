@@ -198,6 +198,8 @@ node index.js
 ```
 
 Sample projects for manual testing are provided in the `sandbox/` directory.
+These include basic Node.js, Python, mixed language, Go, and Laravel PHP
+setups for quick environment detection tests.
 
 ## License
 
