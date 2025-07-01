@@ -127,6 +127,46 @@ prompter-framework/
 └── test/                    # Test files
 ```
 
+## Task Master Integration
+
+This framework bundles the [claude-task-master](https://www.npmjs.com/package/claude-task-master)
+package for advanced task management.
+
+### Updating Task Master
+
+Run the helper script to install the newest version:
+
+```bash
+node scripts/update-task-master.js
+```
+
+### Using Task Master Programmatically
+
+The wrapper API in `src/taskmaster/` exposes the CLI. Example:
+
+```javascript
+import { runTaskMaster, initProject } from 'prompter-framework/src/taskmaster/index.js';
+
+await runTaskMaster(['list']);
+```
+
+### Configuration
+
+Task Master reads options from environment variables in a `.env` file:
+
+- `ANTHROPIC_API_KEY` – required Claude API key
+- `MODEL` – Claude model name (default `claude-3-7-sonnet-20250219`)
+- `MAX_TOKENS` – maximum tokens (default `4000`)
+- `TEMPERATURE` – generation temperature (default `0.7`)
+- `PERPLEXITY_API_KEY` – Perplexity API key for research
+- `PERPLEXITY_MODEL` – Perplexity model (default `sonar-medium-online`)
+- `DEBUG` – enable debug logging
+- `LOG_LEVEL` – one of `debug`, `info`, `warn`, `error`
+- `DEFAULT_SUBTASKS` – default subtask count
+- `DEFAULT_PRIORITY` – default task priority
+- `PROJECT_NAME` – override project name
+- `PROJECT_VERSION` – override project version
+
 ## Contributing
 
 1. Fork the repository
