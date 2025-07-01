@@ -187,6 +187,18 @@ Task Master reads options from environment variables in a `.env` file:
 4. Write tests
 5. Submit a pull request
 
+## Environment Detection
+
+This package automatically detects whether a project is using Node.js,
+Python, or a combination of both. The detection script runs during the
+`npm install` step. You can also run it manually:
+
+```bash
+node index.js
+```
+
+Sample projects for manual testing are provided in the `sandbox/` directory.
+
 ## License
 
 MIT License - see LICENSE file for details.

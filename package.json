@@ -60,7 +60,10 @@
     "src/",
     "README.md",
     "LICENSE",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "index.js",
+    "scripts/postinstall.js",
+    "lib/env.js"
   ],
   "engines": {
     "node": ">=16.0.0"
@@ -87,7 +90,8 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "update:task-master": "node scripts/update-task-master.js"
+    "update:task-master": "node scripts/update-task-master.js",
+    "postinstall": "node scripts/postinstall.js"
   },
   "dependencies": {
     "claude-task-master": "^1.6.4",
