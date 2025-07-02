@@ -119,6 +119,8 @@ const prompt = generator.generate({
 
 See [docs/index.md](docs/index.md) for additional guides and the [API reference](docs/api/index.md).
 
+See [CHANGELOG.md](CHANGELOG.md) for release history.
+
 ## Available Task Types
 
 - **implementation**: Feature development and system building
