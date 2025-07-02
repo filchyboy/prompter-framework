@@ -115,6 +115,14 @@ const prompt = generator.generate({
 }, 'security-audit');
 ```
 
+## Examples
+
+The `examples/` directory contains runnable demonstration scripts:
+
+- `basic-usage.js` – quick start programmatic example
+- `plugin-usage.js` – how to register a custom plugin
+- `cli-template-workflow.sh` – CLI workflow for generating and using templates
+
 ## Documentation
 
 See [docs/index.md](docs/index.md) for additional guides and the [API reference](docs/api/index.md).
