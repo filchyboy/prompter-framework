@@ -14,6 +14,13 @@ A meta-framework for generating structured AI agent prompts with built-in contex
 
 ## Quick Start
 
+### Prerequisites
+
+Ensure you have **Node.js ≥16** available. The repository also
+provides a helper script called `setup.sh`. This script will install
+Node.js if it isn't already present and then execute the standard
+setup commands (`npm ci` and `npm test`) to verify the project.
+
 ### Installation
 
 ```bash
@@ -109,6 +116,29 @@ const prompt = generator.generate({
 }, 'security-audit');
 ```
 
+## Examples
+
+The `examples/` directory contains runnable demonstration scripts:
+
+- `basic-usage.js` – quick start programmatic example
+- `plugin-usage.js` – how to register a custom plugin
+- `cli-template-workflow.sh` – CLI workflow for generating and using templates
+
+## Documentation
+
+Additional guides and references:
+
+- [Documentation Index](docs/index.md)
+- [Migration Guide](docs/guides/migration.md)
+- [Plugin Development Guide](docs/guides/plugin-development.md)
+- [API Reference](docs/api/index.md)
+
+Documentation is built with [VitePress](https://vitepress.dev). Run
+`npm run docs:dev` to start a local preview server and
+`npm run docs:build` to generate the production-ready site.
+
+See [CHANGELOG.md](CHANGELOG.md) for release history.
+
 ## Available Task Types
 
 - **implementation**: Feature development and system building
@@ -181,11 +211,14 @@ Task Master reads options from environment variables in a `.env` file:
 
 ## Contributing
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for setup instructions, coding style and guidelines.
+
 1. Fork the repository
 2. Create a feature branch
 3. Add your enhancement
 4. Write tests
 5. Submit a pull request
+6. Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## Environment Detection
 
@@ -196,6 +229,48 @@ Python, or a combination of both. The detection script runs during the
 ```bash
 node index.js
 ```
+
+### Purpose of `scripts/postinstall.js` and `lib/env.js`
+
+The **postinstall** script runs automatically after installation. It
+invokes `detectEnvironment` from `lib/env.js` to inspect the current
+project and prints the detected settings. The `lib/env.js` module
+contains the detection logic that looks for files such as
+`package.json`, `requirements.txt` or `pyproject.toml` and returns an
+object describing the environment.
+
+### Example output
+
+```bash
+$ node index.js
+Environment detected:
+{
+  isPython: false,
+  isNode: true,
+  hasPoetry: false,
+  hasPipenv: false,
+  environmentType: 'node'
+}
+```
+
+### Integrating detection
+
+Run the script manually at any time:
+
+```bash
+node index.js
+```
+
+For programmatic use you can import the function:
+
+```javascript
+import { detectEnvironment } from 'prompter-framework/lib/env.js';
+
+const env = detectEnvironment(process.cwd());
+console.log(env);
+```
+
+This helper can be included in your own setup or build scripts.
 
 Sample projects for manual testing are provided in the `sandbox/` directory.
 These include basic Node.js, Python, mixed language, Go, and Laravel PHP
