@@ -117,7 +117,12 @@ const prompt = generator.generate({
 
 ## Documentation
 
-See [docs/index.md](docs/index.md) for additional guides and the [API reference](docs/api/index.md).
+Additional guides and references:
+
+- [Documentation Index](docs/index.md)
+- [Migration Guide](docs/guides/migration.md)
+- [Plugin Development Guide](docs/guides/plugin-development.md)
+- [API Reference](docs/api/index.md)
 
 ## Available Task Types
 
