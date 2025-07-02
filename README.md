@@ -137,6 +137,8 @@ Documentation is built with [VitePress](https://vitepress.dev). Run
 `npm run docs:dev` to start a local preview server and
 `npm run docs:build` to generate the production-ready site.
 
+See [CHANGELOG.md](CHANGELOG.md) for release history.
+
 ## Available Task Types
 
 - **implementation**: Feature development and system building
