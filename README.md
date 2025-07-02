@@ -133,6 +133,10 @@ Additional guides and references:
 - [Plugin Development Guide](docs/guides/plugin-development.md)
 - [API Reference](docs/api/index.md)
 
+Documentation is built with [VitePress](https://vitepress.dev). Run
+`npm run docs:dev` to start a local preview server and
+`npm run docs:build` to generate the production-ready site.
+
 ## Available Task Types
 
 - **implementation**: Feature development and system building
