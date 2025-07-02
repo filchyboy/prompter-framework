@@ -119,6 +119,10 @@ const prompt = generator.generate({
 
 See [docs/index.md](docs/index.md) for additional guides and the [API reference](docs/api/index.md).
 
+Documentation is built with [VitePress](https://vitepress.dev). Run
+`npm run docs:dev` to start a local preview server and
+`npm run docs:build` to generate the production-ready site.
+
 ## Available Task Types
 
 - **implementation**: Feature development and system building
