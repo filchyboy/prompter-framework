@@ -224,6 +224,48 @@ Python, or a combination of both. The detection script runs during the
 node index.js
 ```
 
+### Purpose of `scripts/postinstall.js` and `lib/env.js`
+
+The **postinstall** script runs automatically after installation. It
+invokes `detectEnvironment` from `lib/env.js` to inspect the current
+project and prints the detected settings. The `lib/env.js` module
+contains the detection logic that looks for files such as
+`package.json`, `requirements.txt` or `pyproject.toml` and returns an
+object describing the environment.
+
+### Example output
+
+```bash
+$ node index.js
+Environment detected:
+{
+  isPython: false,
+  isNode: true,
+  hasPoetry: false,
+  hasPipenv: false,
+  environmentType: 'node'
+}
+```
+
+### Integrating detection
+
+Run the script manually at any time:
+
+```bash
+node index.js
+```
+
+For programmatic use you can import the function:
+
+```javascript
+import { detectEnvironment } from 'prompter-framework/lib/env.js';
+
+const env = detectEnvironment(process.cwd());
+console.log(env);
+```
+
+This helper can be included in your own setup or build scripts.
+
 Sample projects for manual testing are provided in the `sandbox/` directory.
 These include basic Node.js, Python, mixed language, Go, and Laravel PHP
 setups for quick environment detection tests.
