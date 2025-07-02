@@ -196,6 +196,7 @@ Task Master reads options from environment variables in a `.env` file:
 3. Add your enhancement
 4. Write tests
 5. Submit a pull request
+6. Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## Environment Detection
 
