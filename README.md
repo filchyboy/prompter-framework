@@ -200,6 +200,8 @@ Task Master reads options from environment variables in a `.env` file:
 
 ## Contributing
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for setup instructions, coding style and guidelines.
+
 1. Fork the repository
 2. Create a feature branch
 3. Add your enhancement
