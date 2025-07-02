@@ -14,6 +14,12 @@ A meta-framework for generating structured AI agent prompts with built-in contex
 
 ## Quick Start
 
+### Prerequisites
+
+Ensure you have **Node.js 16 or newer** available. The repository
+includes a helper script `setup.sh` which installs Node.js if needed
+and then runs the standard setup commands (`npm ci` and `npm test`).
+
 ### Installation
 
 ```bash
